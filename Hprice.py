@@ -7,7 +7,6 @@ df=pd.read_csv(r"C:\Users\rakesh kumar \OneDrive\Desktop\skill_lab\homeprice_ban
 x=df.drop(columns=['prices'])
 y=df.drop(columns=['bedrooms','area','age'],axis='columns')
 
-
 window=Tk()
 window.title("HOUSE PRICES")
 window.geometry("700x300+100+85")
@@ -46,5 +45,5 @@ def find():
     amount=model.predict([[sqrt,beds,ages]])
     display.config(text=f"{"The Assessed Value for the House with",sqrt,"sqrt with",age,"years old house for RS:",float(amount[0][0])}")
     n+=1
-
+  
 window.mainloop()
